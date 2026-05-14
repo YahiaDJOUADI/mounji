@@ -34,41 +34,41 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
     .set('.ping', { scale: 0, opacity: 0 });
 
     // ── Phase 1: The Scan ──
-    tl.to('.scanline', { opacity: 1, duration: 0.3 })
-      .to('.scanline', { x: 330, duration: 2.2, ease: 'none' });
+    tl.to('.scanline', { opacity: 1, duration: 0.2 })
+      .to('.scanline', { x: 330, duration: 1.0, ease: 'none' });
 
     // Drawing paths as scanline passes
     tl.to('.pre-path', {
       opacity: 1,
       strokeDashoffset: 0,
-      duration: 1.8,
-      stagger: 0.08,
+      duration: 0.8,
+      stagger: 0.04,
       ease: 'power2.inOut'
-    }, 0.3);
+    }, 0.2);
 
     // Pings at corner points
     tl.to('.ping', {
       scale: 1,
       opacity: 1,
-      duration: 0.4,
-      stagger: 0.15,
+      duration: 0.2,
+      stagger: 0.08,
       ease: 'back.out(2)'
-    }, 0.5)
-    .to('.ping', { opacity: 0, duration: 0.3, stagger: 0.1 }, '+=0.2');
+    }, 0.3)
+    .to('.ping', { opacity: 0, duration: 0.2, stagger: 0.05 }, '+=0.1');
 
     // ── Phase 2: Calibration (Counter) ──
     tl.call(() => setPhase('calibrating'), undefined, '+=0.1')
       .to({ val: 0 }, {
         val: 100,
-        duration: 1.4,
+        duration: 0.6,
         ease: 'power3.inOut',
         onUpdate: function() { setCount(Math.round(this.targets()[0].val)); },
       });
 
     // ── Phase 3: Final Reveal ──
-    tl.call(() => setPhase('entering'), undefined, '+=0.2')
-      .to('.preloader-content', { scale: 1.05, opacity: 0, duration: 0.6, ease: 'power2.in' })
-      .to('.bg-accent', { opacity: 0, duration: 0.4 }, '-=0.3');
+    tl.call(() => setPhase('entering'), undefined, '+=0.1')
+      .to('.preloader-content', { scale: 1.05, opacity: 0, duration: 0.4, ease: 'power2.in' })
+      .to('.bg-accent', { opacity: 0, duration: 0.3 }, '-=0.2');
 
     return () => { tl.kill(); };
   }, [onComplete]);

@@ -135,7 +135,7 @@ export default function HomeContent() {
               <h1
                 ref={titleRef}
                 className="font-display font-light text-arch-white leading-[0.82] tracking-[-0.03em] hero-shadow"
-                style={{ fontSize: 'clamp(5rem, 13vw, 12rem)', perspective: '1000px' }}
+                style={{ fontSize: 'clamp(3.5rem, 15vw, 12rem)', perspective: '1000px' }}
               >
                 Djouadi<br /><span className="text-arch-gold italic text-glow-gold">Mounji</span>
               </h1>
@@ -145,14 +145,14 @@ export default function HomeContent() {
                 <p className="text-arch-muted font-light text-base max-w-xs leading-relaxed">
                   Timeless architectural narratives across North Africa and beyond.
                 </p>
-                <div className="flex gap-4 shrink-0">
+                <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-4 shrink-0">
                   <MagneticButton strength={40}>
-                    <Link href="/projects" className="arch-btn arch-btn-primary arch-btn-lg">
+                    <Link href="/projects" className="arch-btn arch-btn-primary arch-btn-lg w-full sm:w-auto">
                       View Portfolio
                     </Link>
                   </MagneticButton>
                   <MagneticButton strength={20}>
-                    <Link href="/contact" className="arch-btn arch-btn-ghost arch-btn-lg">
+                    <Link href="/contact" className="arch-btn arch-btn-ghost arch-btn-lg w-full sm:w-auto">
                       Discuss Project
                     </Link>
                   </MagneticButton>
@@ -232,7 +232,7 @@ export default function HomeContent() {
                       0{i + 1}
                     </div>
                     <h2 className="font-display font-light text-arch-white leading-none tracking-tight hero-shadow"
-                      style={{ fontSize: 'clamp(3rem, 7vw, 7rem)' }}
+                      style={{ fontSize: 'clamp(2.5rem, 7vw, 7rem)' }}
                     >
                       {project.title}
                     </h2>
@@ -291,7 +291,7 @@ export default function HomeContent() {
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
 
           {/* Left — image (sticky) */}
-          <div className="relative lg:sticky lg:top-0 lg:h-screen overflow-hidden">
+          <div className="relative h-[60vh] lg:h-screen lg:sticky lg:top-0 overflow-hidden">
             <Image
               src="/images/architect-portrait.jpg"
               alt="Djouadi Mounji"
@@ -322,12 +322,12 @@ export default function HomeContent() {
           </div>
 
           {/* Right — scrolling philosophy content */}
-          <div className="relative bg-arch-black lg:bg-transparent py-32 px-8 lg:px-16 xl:px-24 flex flex-col justify-center gap-32">
+          <div className="relative bg-arch-black lg:bg-transparent py-20 lg:py-32 px-6 lg:px-16 xl:px-24 flex flex-col justify-center gap-20 lg:gap-32">
 
             {/* Philosophy text 1 */}
             <div className="reveal-up">
-              <div className="flex items-center gap-4 mb-8">
-                <span className="font-display text-[8rem] text-arch-gold/6 italic absolute -left-4 -top-16 pointer-events-none leading-none select-none">01</span>
+              <div className="flex items-center gap-4 mb-6 lg:mb-8">
+                <span className="font-display text-[6rem] lg:text-[8rem] text-arch-gold/6 italic absolute -left-2 lg:-left-4 -top-12 lg:-top-16 pointer-events-none leading-none select-none">01</span>
                 <div className="w-8 h-px bg-arch-gold/30" />
                 <span className="eyebrow">Context</span>
               </div>
@@ -341,8 +341,8 @@ export default function HomeContent() {
 
             {/* Philosophy text 2 */}
             <div className="reveal-up">
-              <div className="flex items-center gap-4 mb-8">
-                <span className="font-display text-[8rem] text-arch-gold/6 italic absolute -left-4 -top-16 pointer-events-none leading-none select-none">02</span>
+              <div className="flex items-center gap-4 mb-6 lg:mb-8">
+                <span className="font-display text-[6rem] lg:text-[8rem] text-arch-gold/6 italic absolute -left-2 lg:-left-4 -top-12 lg:-top-16 pointer-events-none leading-none select-none">02</span>
                 <div className="w-8 h-px bg-arch-gold/30" />
                 <span className="eyebrow">Precision</span>
               </div>
@@ -360,8 +360,8 @@ export default function HomeContent() {
             </div>
 
             {/* Stats row */}
-            <div className="reveal-up border-t border-arch-border/30 pt-16">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="reveal-up border-t border-arch-border/30 pt-12 lg:pt-16">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
                 {[
                   { n: '12+', l: 'Years' },
                   { n: '85+', l: 'Projects' },
@@ -480,7 +480,7 @@ export default function HomeContent() {
           <span className="eyebrow text-arch-gold mb-8 block">Begin the Dialogue</span>
           <h2
             className="font-display font-light text-arch-white leading-[0.82] tracking-[-0.03em] mb-16 hero-shadow"
-            style={{ fontSize: 'clamp(5rem, 14vw, 13rem)' }}
+            style={{ fontSize: 'clamp(3.5rem, 14vw, 13rem)' }}
           >
             Start your<br /><span className="text-arch-gold italic text-glow-gold">Legacy</span>
           </h2>
