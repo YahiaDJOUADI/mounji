@@ -57,7 +57,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
     .to('.ping', { opacity: 0, duration: 0.3, stagger: 0.1 }, '+=0.2');
 
     // ── Phase 2: Calibration (Counter) ──
-    tl.call(() => setPhase('calibrating'), null, '+=0.1')
+    tl.call(() => setPhase('calibrating'), undefined, '+=0.1')
       .to({ val: 0 }, {
         val: 100,
         duration: 1.4,
@@ -66,7 +66,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
       });
 
     // ── Phase 3: Final Reveal ──
-    tl.call(() => setPhase('entering'), null, '+=0.2')
+    tl.call(() => setPhase('entering'), undefined, '+=0.2')
       .to('.preloader-content', { scale: 1.05, opacity: 0, duration: 0.6, ease: 'power2.in' })
       .to('.bg-accent', { opacity: 0, duration: 0.4 }, '-=0.3');
 
