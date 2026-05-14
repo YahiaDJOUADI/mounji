@@ -18,8 +18,14 @@ const PageTransition = () => {
   const pathname    = usePathname();
 
   const page = PAGE_NAMES[pathname] ?? { label: 'Loading', code: 'REF_00' };
+  const isFirstMount = useRef(true);
 
   useEffect(() => {
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+      return;
+    }
+
     const overlay = overlayRef.current;
     const bar     = barRef.current;
     if (!overlay) return;

@@ -30,15 +30,15 @@ const NavLink = ({ item, index, isActive }: { item: { name: string; href: string
     >
       <Link href={item.href} className="group relative flex flex-col items-center gap-0.5 pb-1.5" aria-current={isActive ? 'page' : undefined}>
         <motion.span
-          className="text-[8px] tracking-[0.25em] font-bold select-none font-mono"
-          animate={{ color: isActive || hovered ? '#C9A84C' : 'rgba(138,133,128,0.5)' }}
+          className="text-[9px] tracking-[0.25em] font-bold select-none font-mono drop-shadow-md"
+          animate={{ color: isActive || hovered ? '#C9A84C' : 'rgba(255,255,255,0.7)' }}
           transition={{ duration: 0.2 }}
         >
           {'0' + (index + 1)}
         </motion.span>
         <motion.span
-          className="text-[10px] tracking-[0.18em] uppercase font-semibold"
-          animate={{ color: isActive || hovered ? '#F2EDE6' : 'rgba(242,237,230,0.45)' }}
+          className="text-[12px] tracking-[0.18em] uppercase font-semibold drop-shadow-md"
+          animate={{ color: isActive || hovered ? '#FFFFFF' : 'rgba(255,255,255,0.9)' }}
           transition={{ duration: 0.2 }}
         >
           {item.name}
