@@ -28,6 +28,7 @@ const dmMono = DM_Mono({
   display: 'swap',
 });
 export const metadata: Metadata = {
+  metadataBase: new URL('https://mounjidjouadi.netlify.app'),
   title: {
     default: 'Djouadi Mounji | Architecture & Design',
     template: '%s | Djouadi Mounji',
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://djouadimounji.com',
+    url: 'https://mounjidjouadi.netlify.app',
     siteName: 'Djouadi Mounji Architecture',
     title: 'Djouadi Mounji | Architecture & Design',
     description: 'Timeless architectural spaces crafted with vision and precision.',
@@ -58,9 +59,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning>
         <div className="grain-overlay" />
         <Providers>
-          <Header />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
+          <div className="relative flex min-h-screen flex-col overflow-x-hidden w-full">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>

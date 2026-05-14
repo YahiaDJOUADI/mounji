@@ -135,7 +135,7 @@ export default function HomeContent() {
               <h1
                 ref={titleRef}
                 className="font-display font-light text-arch-white leading-[0.82] tracking-[-0.03em] hero-shadow"
-                style={{ fontSize: 'clamp(3.5rem, 15vw, 12rem)', perspective: '1000px' }}
+                style={{ fontSize: 'clamp(2.5rem, 15vw, 12rem)', perspective: '1000px' }}
               >
                 Djouadi<br /><span className="text-arch-gold italic text-glow-gold">Mounji</span>
               </h1>
@@ -391,7 +391,7 @@ export default function HomeContent() {
                 <span className="eyebrow">Selected Works</span>
               </div>
               <h2 className="font-display font-light text-arch-white leading-none tracking-tight"
-                style={{ fontSize: 'clamp(3.5rem, 7vw, 6.5rem)' }}
+                style={{ fontSize: 'clamp(2.5rem, 10vw, 6.5rem)' }}
               >
                 Recent<br /><span className="text-outline-gold">Projects</span>
               </h2>
@@ -480,7 +480,7 @@ export default function HomeContent() {
           <span className="eyebrow text-arch-gold mb-8 block">Begin the Dialogue</span>
           <h2
             className="font-display font-light text-arch-white leading-[0.82] tracking-[-0.03em] mb-16 hero-shadow"
-            style={{ fontSize: 'clamp(3.5rem, 14vw, 13rem)' }}
+            style={{ fontSize: 'clamp(2.5rem, 14vw, 13rem)' }}
           >
             Start your<br /><span className="text-arch-gold italic text-glow-gold">Legacy</span>
           </h2>

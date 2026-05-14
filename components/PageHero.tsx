@@ -131,7 +131,7 @@ const PageHero = ({ title, subtitle, label, backgroundImage, bgImage, children }
             <h1
               ref={titleRef}
               className="font-display font-light text-arch-white leading-[0.85] tracking-[-0.04em] hero-shadow"
-              style={{ fontSize: 'clamp(4rem, 11vw, 10.5rem)', perspective: '1000px' }}
+              style={{ fontSize: 'clamp(3rem, 11vw, 10.5rem)', perspective: '1000px' }}
             >
               <div className="overflow-hidden">
                 <span className="hero-title-line inline-block">{first}</span>

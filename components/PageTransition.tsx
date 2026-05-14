@@ -92,7 +92,7 @@ const PageTransition = () => {
         <div className="overflow-hidden mb-8">
           <h2
             className="tr-line font-display font-light tracking-tight leading-none text-arch-white"
-            style={{ fontSize: 'clamp(4rem, 12vw, 9rem)', fontFamily: 'var(--font-cormorant), serif' }}
+            style={{ fontSize: 'clamp(3rem, 12vw, 9rem)', fontFamily: 'var(--font-cormorant), serif' }}
           >
             {page.label}
           </h2>

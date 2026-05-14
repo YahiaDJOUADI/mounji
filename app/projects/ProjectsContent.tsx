@@ -119,7 +119,7 @@ export default function ProjectsContent() {
                     <div className="h-px flex-1 bg-arch-gold/30" />
                     <span className="mono-tag text-arch-gold/60">{project.category}</span>
                   </div>
-                  <h3 className="font-display text-6xl lg:text-8xl text-arch-white font-light leading-tight mb-8 hero-shadow">
+                  <h3 className="font-display text-5xl sm:text-6xl lg:text-8xl text-arch-white font-light leading-tight mb-8 hero-shadow">
                     {project.title.split(' ').map((word, idx) => (
                       <span key={idx} className={idx === project.title.split(' ').length - 1 ? 'text-arch-gold italic text-glow-gold' : ''}>
                         {word}{' '}
