@@ -1,0 +1,97 @@
+
+/* RTL-specific styles */
+
+html[dir="rtl"] {
+  font-family: 'Noto Sans Arabic', 'Noto Kufi Arabic', sans-serif;
+}
+
+html[dir="rtl"] * {
+  letter-spacing: 0;
+}
+
+/* Adjust navigation for RTL */
+html[dir="rtl"] .nav-item {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+/* Flip icons that need direction adjustment */
+html[dir="rtl"] .icon-direction-sensitive {
+  transform: scaleX(-1);
+}
+
+/* Adjust arrow directions */
+html[dir="rtl"] .arrow-right {
+  transform: rotate(180deg);
+}
+
+/* Adjust form fields for RTL */
+html[dir="rtl"] input,
+html[dir="rtl"] textarea {
+  text-align: right;
+}
+
+/* Fix dropdown menu positioning for RTL */
+html[dir="rtl"] [data-radix-popper-content-wrapper] {
+  transform-origin: right top !important;
+}
+
+/* Adjust experience grid columns for RTL */
+html[dir="rtl"] .experience-grid {
+  grid-template-columns: 3fr 1fr;
+}
+
+/* Fix spacing in dropdown menu items for RTL */
+html[dir="rtl"] .dropdown-menu-item {
+  padding-right: 0.75rem;
+  padding-left: 2rem;
+}
+
+/* Fix navigation menu for RTL */
+html[dir="rtl"] .NavigationMenuContent {
+  left: auto;
+  right: 0;
+}
+
+/* Language switcher specific RTL fixes */
+html[dir="rtl"] .DropdownMenuContent {
+  text-align: right;
+}
+
+/* Fix button icons for RTL */
+html[dir="rtl"] button svg + span:not(.sr-only) {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+/* Fix all radix popover, dropdown, menubar positioning for RTL */
+html[dir="rtl"] [data-side="bottom"] {
+  margin-right: var(--radix-dropdown-menu-content-transform-origin-offset-x);
+}
+
+/* Fix dark mode switcher position in RTL */
+html[dir="rtl"] .theme-toggle {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+/* Improved dark mode text readability */
+html[dir="rtl"] .dark .text-portfolio-muted,
+html[dir="rtl"] .dark .text-muted-foreground {
+  color: #f0f0f0;
+}
+
+/* Fix RTL padding in navigation items */
+html[dir="rtl"] .NavigationMenuList {
+  padding-right: 0;
+}
+
+/* RTL spacing fixes */
+html[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+html[dir="rtl"] .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
